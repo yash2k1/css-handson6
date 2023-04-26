@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("./img/shara_desert.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+header {
+  margin: auto;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 20px;
+}
+.logo {
+  background-image: url("./img/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  width: 50px;
+}
+.nav {
+  display: flex;
+ align-items: center;
+}
+ol{
+list-style-type: none;
+width: 350px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+.navbar {
+  color: white;
+  text-decoration: none;
+}
+.hamburger {
+  background-image: url("./img/menu.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+/* --------------------container---------------- */
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* -------------left container----------- */
+.leftContainer {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+.leftContainer h1 {
+  font-size: 100px;
+  color: white;
+}
+.leftContainer p {
+  color: white;
+}
+.expBtn {
+  margin-top: 30px;
+  border-radius: 20px;
+  background-color: white;
+  width: 150px;
+  height: 30px;
+  font-weight: bold;
+  border: none;
+}
+
+/* -------------right container----------- */
+.rightContainer {
+  display: grid;
+  grid-template-columns: 220px 220px;
+  grid-template-rows: 270px 270px;
+  gap: 20px;
+  justify-content: center;
+}
+.img {
+  border-radius: 10px;
+  transition: 0.5s;
+  display: flex;
+
+  justify-content: center;
+}
+.img:hover {
+  transform: translateY(-10px);
+}
+.img1 {
+  background-image: url("./img/pic-1_480.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img2 {
+  background-image: url("./img/pic-2_480.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img3 {
+  background-image: url("./img/pic-3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img4 {
+  background-image: url("./img/pic-4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.imgText {
+  width: 200px;
+  color: white;
+}
+.imgText span {
+  line-height: 30px;
+}
+/* ------------tablet view--------------- */
+@media (min-width: 500px) and (max-width: 856px) {
+   
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  /* -------------left container-------------- */
+  .leftContainer{
+ margin: auto;
+}
+  .leftContainer h1 {
+    font-size: 30px;
+  }
+  /* --------------right container----------- */
+  .rightContainer {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 500px;
+    grid-template-rows: repeat(4, 250px);
+    justify-content: center;
+  }
+  .img {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .imgText {
+    margin-left: 40px;
+    width: 400px;
+  }
+}
+/* -----------------mobile view----------------- */
+@media   (max-width: 500px) {
+.nav{
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+ol{
+    width: 100px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    }
+   
+.container {
+    display: flex;
+    flex-direction: column;
+  }
+    /* -------------left container-------------- */
+    .leftContainer{
+        width: 80vw;
+        margin: auto;
+       display: flex;
+       justify-content: flex-start;
+       align-items: flex-start;
+
+    }
+    .leftContainer h1 {
+           font-size: 30px;
+         }
+    
+  /* --------------right container----------- */
+  .rightContainer {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 220px;
+    grid-template-rows: repeat(4, 270px);
+    justify-content: center;
+  }
+  .img {
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+  }
+
+}
